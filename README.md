@@ -27,9 +27,9 @@ Construct a TMDb database in SQLite.
   - popularity (real)
 
 **b**.  Create indexes.
-  - movie_index for the id column in movies table
-  - cast_index for the cast_id column in movie_cast table
-  - cast_bio_index for the cast_id column in cast_bio table
+  1. movie_index for the id column in movies table
+  2. cast_index for the cast_id column in movie_cast table
+  3. cast_bio_index for the cast_id column in cast_bio table
 
 **c**. Calculate a proportion. Find the proportion of movies having both a score > 50 and the substring 'war' in the name.
 
@@ -39,9 +39,9 @@ Construct a TMDb database in SQLite.
 number of cast members in ascending order, then by movie name in alphabetical order. 
 
 **f**. Get high scoring actors. Find the top ten cast members who have the highest average movie scores.
-  - Sort the output by average score in descending order, then by cast_name in alphabetical order.
-  - First exclude movies with score <25 in the average score calculation.
-  - Next exclude cast members who have appeared in two or fewer movies.
+  1. Sort the output by average score in descending order, then by cast_name in alphabetical order.
+  2. First exclude movies with score <25 in the average score calculation.
+  3. Next exclude cast members who have appeared in two or fewer movies.
 
 **g**. Creating views. Create a view called good_collaboration that lists pairs of actors who have had a good collaboration as defined here. Each row in the view describes one pair of actors who appeared in at least 3 movies together AND the average score of these movies is >= 40.
 Find the best collaborators. Get the 5 cast members with the highest average scores from the good_collaboration view, and call this score the collaboration_score. This score is the average of the average_movie_score corresponding to each cast member, including actors in cast_member_id1 as well as cast_member_id2. 
@@ -51,5 +51,5 @@ Find the best collaborators. Get the 5 cast members with the highest average sco
   - id (integer)
   - overview (text)
 
-i. Count the number of movies whose overview field contains the word 'fight'. Matches are not case sensitive. Match full words, not word parts/sub-strings.
-ii. Count the number of movies that contain the terms 'space' and 'program' in the overview field with no more than 5 intervening terms in between.
+- i. Count the number of movies whose overview field contains the word 'fight'. Matches are not case sensitive. Match full words, not word parts/sub-strings.
+- ii. Count the number of movies that contain the terms 'space' and 'program' in the overview field with no more than 5 intervening terms in between.
